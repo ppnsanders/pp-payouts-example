@@ -3,8 +3,7 @@ pp-payouts-example
 
 > **Disclaimer:** The applications provided here and all code is provided as-is.  These examples are intended to be **EXAMPLES** and are not intended to be used in a production environment.  I am employed at PayPal, however, the code herein is provided from myself as an example not from PayPal, Inc.  I hope these are helpful to helping you understand the API's, but please do not use in a production environment.
 
-===========
-
+-----
 
 ## Setup
 
