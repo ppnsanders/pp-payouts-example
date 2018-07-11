@@ -1,0 +1,90 @@
+<div id="payoutView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="payoutFields">
+                <center><h3>Payout Fields</h3></center>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>sender_batch_id:</label>
+                            <input type="text" ng-model="model.payoutObj.sender_batch_header.sender_batch_id">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>email_subject:</label>
+                            <input type="text" ng-model="model.payoutObj.sender_batch_header.email_subject">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>email_message:</label>
+                            <input type="text" ng-model="model.payoutObj.sender_batch_header.email_message">
+                        </div>
+                    </div>
+                    <div ng-repeat="rcvr in model.payoutObj.items" style="border: 1px solid #333;">
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>recipient_type</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].recipient_type">
+                            </div>
+                        </div>
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>amount.value</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].amount.value">
+                            </div>
+                        </div>
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>amount.currency</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].amount.currency">
+                            </div>
+                        </div>
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>note</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].note">
+                            </div>
+                        </div>
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>sender_item_id</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].sender_item_id">
+                            </div>
+                        </div>
+                        <div class="inline fields">
+                            <div class="sixteen wide field">
+                                <label>receiver</label>
+                                <input type="text" ng-model="model.payoutObj.items[$index].receiver">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="payoutRequestObj" class="column">
+                <center><h3>Payout Request Object</h3></center>
+                <button id="payoutCreateButton" class="fluid ui primary button" ng-click="model.createPayout()">Create Payout</button>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                    <pre>
+                        [[model.payoutObj | json]]
+                    </pre>
+                </div>
+            </div>
+            <div id="payoutResponseObject" class="column" style="display: none;">
+                <center><h3>Payout Response Object</h3></center>
+                <div id="payoutResponseJson" style="display: none;">
+                    <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                        <pre>
+                            [[model.payoutResponse | json]]
+                        </pre>
+                    </div>
+                </div>
+                <div id="payoutResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

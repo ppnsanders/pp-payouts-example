@@ -1,0 +1,29 @@
+<script>
+    $('#completeTests').accordion({selector: { trigger: '.title .icon' } })
+</script>
+<div id="payoutView">
+    <div class="ui grid">
+        <div class="row">
+            <div class="column">
+                <button id="runTestsButton" class="fluid ui primary button" ng-click="model.runTests()">Run Payout Tests</button>
+                <div id="completeTests" class="ui styled fluid accordion">
+                    <div ng-repeat="test in model.tests | orderBy: test.error.id">
+                        <div class="title">
+                            <i class="dropdown icon"></i>
+                            [[test.error.number]] - [[test.error.errorName]] - [[test.error.type]] 
+                            <span style="float: right; display: none;" id="check[[test.error.id]]"><i class="green check circle outline icon"></i></span>
+                            <span style="float: right; display: none;" id="failed[[test.error.id]]"><span ng-if="test.result.response.batch_header.batch_status"><span style="float: right">[[test.result.response.batch_header.batch_status]]</span></span><i class="red exclamation circle icon"></i></span>
+                        </div>
+                        <div class="content">
+                            <strong><p>Request:</p></strong>
+                            <pre>[[test.result.request | json]]</pre>
+                            <strong><p>Response:</p></strong>
+                            <pre>[[test.result.response | json]]</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

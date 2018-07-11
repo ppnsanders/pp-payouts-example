@@ -1,0 +1,26 @@
+{
+  "name": "pp-payouts-example",
+  "description": "PayPal Payouts API tester and automated test cases.",
+  "main": "index.js",
+  "author": "Nate Sanders",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-cookies": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "jquery": "^3.3.1",
+    "semantic": "^2.3.3",
+    "async": "^2.6.1"
+  }
+}
