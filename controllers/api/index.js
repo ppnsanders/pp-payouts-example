@@ -8,7 +8,7 @@ const paypal = require('paypal-rest-sdk')
 module.exports = (router) => {
 
 	router.get('/config', (req, res) => {
-		console.log(paypalConfig)
+		//console.log(paypalConfig)
 		res.json(paypalConfig)
 	})
 
@@ -29,8 +29,8 @@ module.exports = (router) => {
 				console.log(err)
 				res.json(err)
 		    } else {
-		        console.log("Get PAYOUT response");
-		        console.log(payout);
+		        //console.log("Get PAYOUT response");
+		        //console.log(payout);
 		        res.json(payout)
 		    }
 		})
@@ -48,8 +48,8 @@ module.exports = (router) => {
 				console.log(err)
 				res.json(err)
 		    } else {
-		        console.log("Get PAYOUT ITEM response");
-		        console.log(payout);
+		        //console.log("Get PAYOUT ITEM response");
+		        //console.log(payout);
 		        res.json(payout)
 		    }
 		})
@@ -218,8 +218,8 @@ module.exports = (router) => {
 				console.log(err)
 				res.json(err)
 		    } else {
-		        console.log("Create Payout Response");
-		        console.log(payout);
+		        //console.log("Create Payout Response");
+		        //console.log(payout);
 		        res.json(payout)
 		    }
 		})
