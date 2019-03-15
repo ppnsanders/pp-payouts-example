@@ -23,7 +23,9 @@
         "makara": "^2.0.3",
         "paypal-rest-sdk": "^1.8.1",
         "request": "^2.87.0",
-        "superagent": "^3.8.3"
+        "superagent": "^3.8.3",
+        "extend": ">=3.0.2",
+        "cryptiles": ">=4.1.2"
     },
     "devDependencies": {
         "grunt": "^0.4.5",
