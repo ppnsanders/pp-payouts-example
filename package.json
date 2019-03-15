@@ -31,7 +31,7 @@
         "grunt-config-dir": "^0.3.2",
         "grunt-contrib-clean": "^0.6.0",
         "grunt-contrib-less": "^1.4.1",
-        "grunt-copy-to": "0.0.10",
+        "grunt-copy-to": "0.0.12",
         "grunt-dustjs": "^1.4.0",
         "grunt-eslint": "^17.3.2",
         "grunt-mocha-cli": "^1.14.0",
